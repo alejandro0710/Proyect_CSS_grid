@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+main {
+  width: 100%;
+  background: hsl(210, 46%, 95%);
+  overflow: hidden;
+  display: grid;
+  padding: 10px;
+}
+
+.box_one,
+.box_two,
+.box_three,
+.box_four,
+.box_five {
+  background-color: hsl(263, 55%, 52%);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.box_two {
+  background: hsl(217, 19%, 35%);
+}
+
+.box_three,
+.box_five {
+  background: white;
+  color: hsl(217, 19%, 35%);
+}
+
+.box_four {
+  background: hsl(219, 29%, 14%);
+}
+
+.user_article h2,
+.user_article p {
+  position: relative;
+  z-index: 3;
+  margin: 10px;
+}
+
+.user_profile p,
+.user_profile b {
+  position: relative;
+  z-index: 3;
+}
+
+.box p {
+  opacity: 50%;
+}
+
+.users_photos {
+  width: 15%;
+  border: white solid 2px;
+  border-radius: 50%;
+}
+
+.users_photos img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.user_name_and_text {
+  height: 20px;
+  margin-left: 15px;
+}
+
+.box_one {
+  position: relative;
+}
+
+.comillas img {
+  width: 40%;
+  top: 0;
+  right: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+.user_profile {
+  display: flex;
+  align-content: center;
+}
+
+@media (min-width: 765px) {
+  .comillas img {
+    width: 20%;
+  }
+
+  .user_profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .user_name_and_text {
+    margin-bottom: 20px;
+  }
+
+  .users_photos {
+    width: 8%;
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 25%);
+    padding: 100px;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+      'box_one box_one box_two box_five'
+      'box_three box_four box_four box_five';
+  }
+
+  .box {
+    margin: 0;
+  }
+
+  .box_one {
+    grid-area: box_one;
+  }
+
+  .box_two {
+    grid-area: box_two;
+  }
+
+  .box_three {
+    grid-area: box_three;
+  }
+
+  .box_three picture,
+  .box_two picture,
+  .box_five picture {
+    width: 18%;
+  }
+
+  .box_four {
+    grid-area: box_four;
+  }
+
+  .box_five {
+    grid-area: box_five;
+  }
+
+  .comillas img{
+      right: 40px;
+  }
+}
